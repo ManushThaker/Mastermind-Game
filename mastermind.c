@@ -56,8 +56,8 @@ int main()
     do
     {
         printf("***************\n");
-        printf("   Welcome to MasterMind Game\n");
-        printf("\tBest of luck\n");
+        printf("Welcome to MasterMind Game\n");
+        printf("Best of luck\n");
         printf("***************\n");
         int f, e;
         while(1)
@@ -78,7 +78,7 @@ int main()
         int choice = 0;
         while(choice < 1 || choice > 3)
         {
-            printf("\nEnter the code of hidden digits (1 to 3): ");
+            printf("\nEnter the code of hidden digits (1 to 3 digits number): ");
             scanf("%d", &choice);
             if(choice < 1 || choice > 3)
                 printf("\nIncorrect number of digits!!\n");
@@ -86,17 +86,7 @@ int main()
         int a[3];
         int z = uniqueRand(a, choice);
         printf("The code has been set.\n");
-        printf("\nDo you want to change the randomly generated code? Press 1 for YES and 0 for NO: ");
-        scanf("%d",&e);
-        if(e == 1)
-        {
-            int z = uniqueRand(a, choice);
-            printf("The code has been changed.\n");
-        }
-        else
-        {
-            printf("All the best\n");
-        }
+        
         do
         {
             printf ("\nYou have %d remaining chances\n", f);
@@ -148,7 +138,7 @@ int main()
             printf("\nSorry, you have lost the game!!!\n");
             
         }
-            printf("\nTotal number of tries = %d", ct);
+            
             printf("\nDo you want to play again? Press 1 for YES and 0 for NO: ");
             
             int playAgain;
